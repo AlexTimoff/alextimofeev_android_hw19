@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">alextimofeev_android_hw18</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="permission">Отуствует доступ к камере</string>
+    <string name="headline">Название</string>
+    <string name="latitude">Широта</string>
+    <string name="longitude">Долгота</string>
+</resources>

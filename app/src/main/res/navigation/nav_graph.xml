@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentPhotoGallery">
+
+    <fragment
+        android:id="@+id/fragmentPhotoGallery"
+        android:name="com.example.alextimofeev_android_hw18.camera.presentation.PhotoGalleryFragment"
+        android:label="fragment_photo_gallery"
+        tools:layout="@layout/fragment_photo_gallery" >
+        <action
+            android:id="@+id/action_fragmentPhotoGallery_to_fragmentNewPhoto"
+            app:destination="@id/fragmentNewPhoto" />
+        <action
+            android:id="@+id/action_fragmentPhotoGallery_to_fragmentMapAttractions"
+            app:destination="@id/fragmentMapAttractions" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentNewPhoto"
+        android:name="com.example.alextimofeev_android_hw18.camera.presentation.NewPhotoFragment"
+        android:label="fragment_map_attractions"
+        tools:layout="@layout/fragment_new_photo" >
+        <action
+            android:id="@+id/action_fragmentNewPhoto_to_fragmentPhotoGallery"
+            app:destination="@id/fragmentPhotoGallery" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentMapAttractions"
+        android:name="com.example.alextimofeev_android_hw18.map.presentation.MapAttractionsFragment"
+        android:label="fragment_map_attractions"
+        tools:layout="@layout/fragment_map_attractions" >
+        <action
+            android:id="@+id/action_fragmentMapAttractions_to_fragmentShowAttraction"
+            app:destination="@id/fragmentShowAttraction" />
+        <action
+            android:id="@+id/action_fragmentMapAttractions_to_fragmentPhotoGallery"
+            app:destination="@id/fragmentPhotoGallery" />
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentShowAttraction"
+        android:name="com.example.alextimofeev_android_hw18.map.presentation.ShowAttractionFragment"
+        android:label="fragment_show_attraction"
+        tools:layout="@layout/fragment_show_attraction">
+    <action
+        android:id="@+id/action_fragmentShowAttraction_to_fragmentMapAttractions"
+        app:destination="@id/fragmentMapAttractions" />
+    </fragment>
+
+</navigation>
